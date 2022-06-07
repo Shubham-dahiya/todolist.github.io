@@ -1,0 +1,123 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+body{
+    background-color: rgb(254, 234, 8);
+    font-family: 'Gentium Plus', serif;
+    min-height: 100vh;
+}
+header{
+    font-size:1.5rem;
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+form input, form button{
+    padding:0.5rem;
+    font-size: 2rem;
+    border:none;
+    background:white;
+
+}
+form button{
+    color:darkblue;
+    background: white;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+form button:hover{
+    background:black;
+    color:white;
+}
+.todo-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    margin:0.5rem;
+    background:white;
+    color:black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.todo li{
+flex:1;
+}
+.trash-btn, .complete-btn{
+    background: black;
+    color:white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn{
+    background-color: orchid;
+}
+.todo-item{
+    padding:0 rem , 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform:translate3d(42px, 135px, 135px ) rotateZ(70deg);
+    opacity: 0.2;
+}
+select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    outline:none;
+    border:none;
+}
+.select{
+    margin: 1rem;
+    position:relative;
+    overflow:hidden;
+}
+select{
+    color:rgb(6, 19, 23);
+    font-size: larger;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
+    width:12rem;
+    height: 3rem;
+    cursor:pointer;
+}
+.select::after{
+    content:"\25BC";
+    position:absolute;
+    background: orange;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events:none;
+    transition:all 0.3s ease;
+}
+.select:hover::after{
+    background:orchid;
+    color:blue;
+
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+}
